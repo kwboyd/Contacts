@@ -1,5 +1,6 @@
 <?php
 include 'header.php';
+$contacts = $db->query('SELECT * FROM contacts')->fetchAll(PDO::FETCH_ASSOC);
  ?>
       <div class="container">
           <table class="table">
@@ -17,23 +18,21 @@ include 'header.php';
             <tbody>
               <?php foreach($contacts as $contact) : ?>
                 <tr>
-                  <td><?= $task['fname']; ?></td>
-                  <td><?= $task['lname']; ?></td>
-                  <td><?= $task['phone']; ?></td>
-                  <td><?= $task['email']; ?></td>
-                  <td><?= $task['street']; ?></td>
-                  <td><?= $task['city']; ?></td>
-                  <td><?= $task['state']; ?></td>
-                  <td><?= $task['zip']; ?></td>
-                  <td><?= $task['notes']; ?></td>
+                  <td><?= $contact['fname']; ?></td>
+                  <td><?= $contact['lname']; ?></td>
+                  <td><?= $contact['phone']; ?></td>
+                  <td><?= $contact['email']; ?></td>
+                  <td><?= $contact['street']; ?></td>
+                  <td><?= $contact['city']; ?></td>
+                  <td><?= $contact['state']; ?></td>
+                  <td><?= $contact['zip']; ?></td>
+                  <td><?= $contact['notes']; ?></td>
                 </tr>
               <?php endforeach; ?>
             </tbody>
           </table>
       </div>
 
-      <script src="/js/jquery-3.1.1.min.js"></script>
-      <script src="/js/tether.min.js"></script>
-      <script src="/js/bootstrap.min.js"></script>
-  </body>
-</html>
+<?php
+include 'footer.php';
+?>
