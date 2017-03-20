@@ -7,6 +7,7 @@
     VALUES
     (:fname, :lname, :phone, :email, :street, :city, :state, :zip, :notes)
   ");
+  //inserts into databse
 
   $stmt->execute(array(
     ':fname' => $_POST['fname'],
@@ -21,6 +22,8 @@
   ));
 
   $id = $db->lastInsertId();
+  //defines id based on last inserted id
 
-   header('Location: http://localhost:8080/edit.php?id=' . $id . '&created=true');
+   header('Location: http://localhost:8080/index.php?id=' . $id . '&created=true');
+   //redirects to index with created = true
 ?>
