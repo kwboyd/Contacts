@@ -20,7 +20,13 @@ $contacts = $db->query('SELECT * FROM contacts')->fetchAll(PDO::FETCH_ASSOC);
    <p>Task created.</p>
  </div>
  <?php endif; ?>
- <h3> Contacts: <?= count($contacts); ?> </h3>
+ <div class="intro-text">
+ <h1> Welcome to the contact manager. </h1>
+ <h4> View all of the added contacts here. Click on 'New Contact' above to add a contact to the database. Click on one of the contacts below to edit or delete it.</h2>
+</div>
+<div class="intro-text">
+ <h5> Total contacts: <?= count($contacts); ?> </h3>
+ </div>
  <!-- counts contacts -->
           <table class="table">
             <thead>
@@ -43,10 +49,10 @@ $contacts = $db->query('SELECT * FROM contacts')->fetchAll(PDO::FETCH_ASSOC);
                   <td data-title="Phone"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['phone']; ?></a></td>
                   <td data-title="Email"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['email']; ?></a></td>
                   <td data-title="Street"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['street']; ?></a></td>
-                  <td data-title="City"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['city']; ?></a></td>
-                  <td data-title="State"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['state']; ?></a></td>
-                  <td data-title="Zip"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['zip']; ?></a></td>
-                  <td data-title="Notes"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['notes']; ?></a></td>
+                  <td class="mobile-inline-block" data-title="City"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['city']; ?></a></td>
+                  <td class="mobile-inline-block" data-title="State"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['state']; ?></a></td>
+                  <td class="mobile-inline-block" data-title="Zip"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['zip']; ?></a></td>
+                  <td class="notes" data-title="Notes"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['notes']; ?></a></td>
                 </tr>
               <?php endforeach; ?>
             </tbody>

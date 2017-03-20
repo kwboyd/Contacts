@@ -1,6 +1,186 @@
 /*table collapse code based on https://css-tricks.com/responsive-data-tables/ and https://elvery.net/demo/responsive-tables/*/
+* {
+  margin: 0;
+  padding: 0;
+}
 
-@media only screen and (max-width: 767px) {
+body {
+  background-color: #806C90;
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #2E2243;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+  color: #2E2243;
+}
+
+a {
+  cursor: pointer;
+}
+
+tr a {
+  color: #5a416f;
+}
+
+tr:hover a{
+  text-decoration: none;
+  color: #787679;
+}
+
+.intro-text {
+  margin: 15px 10px;
+}
+
+.container-fluid {
+  overflow-x: scroll;
+  background-color: white;
+  margin: 20px;
+  box-shadow: 3px 3px 10px #444141;
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+
+nav {
+  background-color: #2E2243;
+}
+
+.navbar-inverse .navbar-nav .nav-link{
+  color: rgba(255, 255, 255, 0.6)
+}
+
+.navbar-toggler {
+  top: 8px;
+  border: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+#toggler-icon {
+  background-image: none;
+}
+
+/*navbar animation from https://codepen.io/designcouch/pen/Atyop*/
+
+#bar-container {
+  margin: 0;
+  padding: 0;
+  width: 35px;
+  height: 30px;
+  position: relative;
+  margin: 0px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#bar-container span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 50%;
+  background: white;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#bar-container span:nth-child(even) {
+  left: 50%;
+  border-radius: 0 9px 9px 0;
+}
+
+#bar-container span:nth-child(odd) {
+  left:0px;
+  border-radius: 9px 0 0 9px;
+}
+
+#bar-container span:nth-child(1), #bar-container span:nth-child(2) {
+  top: 3px;
+}
+
+#bar-container span:nth-child(3), #bar-container span:nth-child(4) {
+  top: 13px;
+}
+
+#bar-container span:nth-child(5), #bar-container span:nth-child(6) {
+  top: 23px;
+}
+
+#bar-container.open span:nth-child(1),#bar-container.open span:nth-child(6) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#bar-container.open span:nth-child(2),#bar-container.open span:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#bar-container.open span:nth-child(1) {
+  left: 5px;
+  top: 7px;
+}
+
+#bar-container.open span:nth-child(2) {
+  left: calc(50% - 5px);
+  top: 7px;
+}
+
+#bar-container.open span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+#bar-container.open span:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
+
+#bar-container.open span:nth-child(5) {
+  left: 5px;
+  top: 15px;
+}
+
+#bar-container.open span:nth-child(6) {
+  left: calc(50% - 5px);
+  top: 15px;
+}
+
+/*end code from codepen*/
+
+.notes {
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+@media only screen and (max-width: 1020px) {
 	/* Force table to not be like tables anymore */
  table,
  thead,
@@ -18,18 +198,25 @@
 		left: -9999px;
 	}
 
- tr { border: 1px solid #ccc; }
+ tr {
+   border: 1px solid #ccc;
+   margin-bottom: 8px;
+   border-radius: 3px;
+  }
 
  td {
 		/* Behave  like a "row" */
 		border: none;
 		border-bottom: 1px solid #eee;
 		position: relative;
-		padding-left: 50%;
 		white-space: normal;
 		text-align: left;
     font-size: .7em;
 	}
+
+  .table td {
+    padding: .2rem .75rem;
+  }
 
  td:before {
 		width: 45%;
@@ -38,7 +225,6 @@
 		text-align:left;
 		font-weight: bold;
 	}
-
 	/*
 	Label the data
 	*/
@@ -48,4 +234,18 @@
  .mobile-large {
    font-size: .9em;
  }
+
+ .mobile-inline-block {
+   display: inline-block;
+ }
+
+ .container-fluid {
+   margin: 14px;
+ }
+}
+
+@media screen and (min-width: 1020px) {
+  .navbar-toggleable-md {
+    align-items: baseline;
+  }
 }

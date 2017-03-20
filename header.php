@@ -8,30 +8,35 @@
     <meta charset="utf-8">
     <title>Contacts manager</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/styles.css">
   <body>
-  <div class="container-fluid">
-
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+    <nav class="navbar navbar-inverse navbar-toggleable-md">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <span id="toggler-icon" class="navbar-toggler-icon"></span> -->
+        <div id="bar-container">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </button>
-      <a class="navbar-brand" href="/index.php">Task App</a>
-    </div>
+      <a class="navbar-brand" href="/index.php">Contacts Manager</a>
 
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="/index.php">All Tasks</a></li>
-              <li><a href="/new.php">New Task</a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-      </nav>
+    <div class="collapse navbar-collapse" id="navbarToggle">
+      <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+    <li class="nav-item">
+      <a class="nav-link" href="/index.php">All Contacts</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/new.php">New Contact</a>
+    </li>
+  </ul>
+</div>
+</nav>
+  <div class="container-fluid">
 
       <div class="row">
