@@ -4,14 +4,26 @@ include 'header.php';
 <div class="col-10 offset-1">
 <form method="POST" action="/create.php">
   <div class="row">
-    <div class="form-group col-sm-6">
+    <div class="form-group col-sm-4">
       <label for="fname">First Name</label>
       <input class="form-control" type="text" name="fname" id="fname" value="" placeholder="First Name"/>
     </div>
 
-    <div class="form-group col-sm-6">
+    <div class="form-group col-sm-4">
       <label for="lname">Last Name</label>
       <input class="form-control" type="text" name="lname" id="lname" value="" placeholder="Last Name"/>
+    </div>
+
+    <div class="form-group col-sm-2">
+      <label for="title">Title</label>
+      <select name="title" id="title" value="Ms." class="form-control">
+          <option value="Ms." selected>Ms.</option>
+          <option value="Mrs.">Mrs.</option>
+          <option value="Mr.">Mr.</option>
+          <option value="Miss">Miss</option>
+          <option value="Mx.">Mx.</option>
+          <option value="Dr.">Dr.</option>
+      </select>
     </div>
 
   </div>

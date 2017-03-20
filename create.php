@@ -3,15 +3,16 @@
   include 'database.php';
 
   $stmt = $db->prepare("INSERT INTO contacts
-    (fname, lname, phone, email, street, city, state, zip, notes)
+    (fname, lname, title, phone, email, street, city, state, zip, notes)
     VALUES
-    (:fname, :lname, :phone, :email, :street, :city, :state, :zip, :notes)
+    (:fname, :lname, :title, :phone, :email, :street, :city, :state, :zip, :notes)
   ");
   //inserts into databse
 
   $stmt->execute(array(
     ':fname' => $_POST['fname'],
     ':lname' => $_POST['lname'],
+    ':title' => $_POST['title'],
     ':phone' => $_POST['phone'],
     ':email' => $_POST['email'],
     ':street' => $_POST['street'],
@@ -24,6 +25,6 @@
   $id = $db->lastInsertId();
   //defines id based on last inserted id
 
-   header('Location: http://localhost:8080/index.php?id=' . $id . '&created=true');
+   header('Location: http://localhost:8080/edit.php?id=' . $id . '&created=true');
    //redirects to index with created = true
 ?>

@@ -10,9 +10,20 @@
   $contact = $stmt->fetch(PDO::FETCH_ASSOC);
 
 ?>
+
 <div class="col-10 offset-1">
-<a href="/delete.php?id=<?= $contact['id']; ?>" class="btn">Delete Task</a>
-<h1>Edit Task</h1>
+  <?php if (array_key_exists('created', $_GET)) : ?>
+  <div>
+    <p>Contact created.</p>
+  </div>
+  <?php endif; ?>
+  <?php if (array_key_exists('updated', $_GET)) : ?>
+  <div>
+    <p>Contact updated.</p>
+  </div>
+  <?php endif; ?>
+<a href="/delete.php?id=<?= $contact['id']; ?>" class="btn">Delete contact</a>
+<h1>Edit Contact</h1>
 
 <form method="POST" action="/update.php">
   <input type="hidden" name="id" id="id" value="<?= $contact['id']; ?>" />
@@ -28,17 +39,30 @@
   </div>
 </div>
 
+<div class="form-group">
+  <label for="title">Title</label>
+  <input class="form-control" type="text" name="title" id="title" value="<?= $contact['title']; ?>" />
+  <select name="title" id="title" value="<?= $contact['title']; ?>" class="form-control">
+      <option value="Ms." selected>Ms.</option>
+      <option value="Mrs.">Mrs.</option>
+      <option value="Mr.">Mr.</option>
+      <option value="Miss">Miss</option>
+      <option value="Mx.">Mx.</option>
+      <option value="Dr.">Dr.</option>
+  </select>
+</div>
+
   <div class="form-group">
     <label for="phone">Telephone</label>
     <input class="form-control" type="tel" name="phone" id="phone" value="<?= $contact['phone']; ?>" />
   </div>
 
   <div class="form-group">
-    <label for="email">Email Address</label>
+    <label for="email">Email</label>
     <input class="form-control" type="email" name="email" id="email" value="<?= $contact['email']; ?>" />
   </div>
   <div class="form-group">
-    <label for="street">Street Address</label>
+    <label for="street">Address</label>
     <input class="form-control" type="text" name="street" id="street" value="<?= $contact['street']; ?>" />
   </div>
   <div class="row">
@@ -111,7 +135,7 @@
   </div>
 
   <div class="form-group col-sm-3">
-    <label for="zip">Zip Code</label>
+    <label for="zip">Zip</label>
     <input class="form-control" type="number" name="zip" id="zip" value="<?= $contact['zip']; ?>" />
   </div>
 </div>

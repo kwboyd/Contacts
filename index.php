@@ -9,17 +9,7 @@ $contacts = $db->query('SELECT * FROM contacts')->fetchAll(PDO::FETCH_ASSOC);
      <p>Contact deleted.</p>
    </div>
  <?php endif; ?>
- <?php if (array_key_exists('updated', $_GET)) : ?>
- <div>
-   <p>Task updated.</p>
- </div>
- <?php endif; ?>
 
- <?php if (array_key_exists('created', $_GET)) : ?>
- <div>
-   <p>Task created.</p>
- </div>
- <?php endif; ?>
  <div class="intro-text">
  <h1> Welcome to the contact manager. </h1>
  <h4> View all of the added contacts here. Click on 'New Contact' above to add a contact to the database. Click on one of the contacts below to edit or delete it.</h2>
@@ -30,8 +20,10 @@ $contacts = $db->query('SELECT * FROM contacts')->fetchAll(PDO::FETCH_ASSOC);
  <!-- counts contacts -->
           <table class="table">
             <thead>
+              <th>ID</th>
               <th>First Name</th>
               <th>Last Name</th>
+              <th>Title</th>
               <th>Phone Number</th>
               <th>Email Address</th>
               <th>Street Address</th>
@@ -44,8 +36,10 @@ $contacts = $db->query('SELECT * FROM contacts')->fetchAll(PDO::FETCH_ASSOC);
               <?php foreach($contacts as $contact) : ?>
                 <!-- displays each contact's information -->
                 <tr>
+                  <td class="mobile-large" data-title="ID"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['id']; ?></a></td>
                   <td class="mobile-large" data-title="First Name"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['fname']; ?></a></td>
                   <td class="mobile-large" data-title="Last Name"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['lname']; ?></a></td>
+                  <td data-title="Title"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['title']; ?></a></td>
                   <td data-title="Phone"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['phone']; ?></a></td>
                   <td data-title="Email"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['email']; ?></a></td>
                   <td data-title="Street"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['street']; ?></a></td>

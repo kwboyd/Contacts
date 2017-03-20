@@ -5,6 +5,7 @@ include 'database.php';
 $stmt = $db->prepare('UPDATE contacts SET
   fname = :fname,
   lname = :lname,
+  title = :title,
   phone = :phone,
   email = :email,
   street = :street,
@@ -18,6 +19,7 @@ $stmt->execute(array(
   ':id' => $_POST['id'],
   ':fname' => $_POST['fname'],
   ':lname' => $_POST['lname'],
+  ':title' => $_POST['title'],
   ':phone' => $_POST['phone'],
   ':email' => $_POST['email'],
   ':street' => $_POST['street'],
@@ -27,4 +29,4 @@ $stmt->execute(array(
   ':notes' => $_POST['notes']
 ));
 
-header('Location: http://localhost:8080/index.php?updated=true&id=' . $_POST['id']);
+header('Location: http://localhost:8080/edit.php?updated=true&id=' . $_POST['id']);
