@@ -1,18 +1,20 @@
 <?php
 include 'header.php';
 ?>
-
+<div class="col-10 offset-1">
 <form method="POST" action="/create.php">
-
-    <div class="form-group">
+  <div class="row">
+    <div class="form-group col-sm-6">
       <label for="fname">First Name</label>
       <input class="form-control" type="text" name="fname" id="fname" value="" placeholder="First Name"/>
     </div>
 
-    <div class="form-group">
+    <div class="form-group col-sm-6">
       <label for="lname">Last Name</label>
       <input class="form-control" type="text" name="lname" id="lname" value="" placeholder="Last Name"/>
     </div>
+
+  </div>
 
     <div class="form-group">
       <label for="phone">Telephone</label>
@@ -112,5 +114,6 @@ include 'header.php';
 
 
 </form>
+</div>
 
 <?php include 'footer.php'; ?>

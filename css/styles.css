@@ -1,0 +1,51 @@
+/*table collapse code based on https://css-tricks.com/responsive-data-tables/ and https://elvery.net/demo/responsive-tables/*/
+
+@media only screen and (max-width: 767px) {
+	/* Force table to not be like tables anymore */
+ table,
+ thead,
+ tbody,
+ th,
+ td,
+ tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+ thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+ tr { border: 1px solid #ccc; }
+
+ td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+		white-space: normal;
+		text-align: left;
+    font-size: .7em;
+	}
+
+ td:before {
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		text-align:left;
+		font-weight: bold;
+	}
+
+	/*
+	Label the data
+	*/
+ td:before { content: attr(data-title); }
+ /*end code from other sources*/
+
+ .mobile-large {
+   font-size: .9em;
+ }
+}

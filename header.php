@@ -9,9 +9,8 @@
     <title>Contacts manager</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
   <body>
-    <div class="container">
-      <nav class="navbar navbar-default">
   <div class="container-fluid">
 
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,9 +32,6 @@
               <li><a href="/new.php">New Task</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
       </nav>
 
       <div class="row">
-
-        <div class="col-md-6 col-md-offset-3">

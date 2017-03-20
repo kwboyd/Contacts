@@ -10,22 +10,23 @@
   $contact = $stmt->fetch(PDO::FETCH_ASSOC);
 
 ?>
-
+<div class="col-10 offset-1">
 <a href="/delete.php?id=<?= $contact['id']; ?>" class="btn">Delete Task</a>
 <h1>Edit Task</h1>
 
 <form method="POST" action="/update.php">
   <input type="hidden" name="id" id="id" value="<?= $contact['id']; ?>" />
-
-  <div class="form-group">
+  <div class="row">
+  <div class="form-group col-sm-6">
     <label for="fname">First Name</label>
     <input class="form-control" type="text" name="fname" id="fname" value="<?= $contact['fname']; ?>" />
   </div>
 
-  <div class="form-group">
+  <div class="form-group col-sm-6">
     <label for="lname">Last Name</label>
     <input class="form-control" type="text" name="lname" id="lname" value="<?= $contact['lname']; ?>" />
   </div>
+</div>
 
   <div class="form-group">
     <label for="phone">Telephone</label>
@@ -36,18 +37,17 @@
     <label for="email">Email Address</label>
     <input class="form-control" type="email" name="email" id="email" value="<?= $contact['email']; ?>" />
   </div>
-
   <div class="form-group">
     <label for="street">Street Address</label>
     <input class="form-control" type="text" name="street" id="street" value="<?= $contact['street']; ?>" />
   </div>
-
-  <div class="form-group">
+  <div class="row">
+  <div class="form-group col-sm-5">
     <label for="city">City</label>
     <input class="form-control" type="text" name="city" id="city" value="<?= $contact['city']; ?>" />
   </div>
 
-  <div class="form-group">
+  <div class="form-group col-sm-4">
     <label for="state">State</label>
     <select name="state" id="state" value="<?= $contact['state']; ?>" class="form-control">
     	<option value="AL" <?= ($contact['state'] == 'AL') ? ' selected' : '' ?>>Alabama</option>
@@ -110,18 +110,20 @@
     </select>
   </div>
 
-  <div class="form-group">
+  <div class="form-group col-sm-3">
     <label for="zip">Zip Code</label>
     <input class="form-control" type="number" name="zip" id="zip" value="<?= $contact['zip']; ?>" />
   </div>
+</div>
 
   <div class="form-group">
     <label for="notes">Notes</label>
-    <textarea class="form-control" name="notes" id="notes" value="<?= $contact['notes']; ?>"></textarea>
+    <textarea class="form-control" name="notes" id="notes" value="<?= $contact['notes']; ?>"><?= $contact['notes']; ?></textarea>
   </div>
 
 
   <button class="btn">Save Task</button>
 </form>
+</div>
 
 <?php include 'footer.php'; ?>
