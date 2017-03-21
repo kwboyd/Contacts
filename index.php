@@ -4,21 +4,20 @@ $contacts = $db->query('SELECT * FROM contacts')->fetchAll(PDO::FETCH_ASSOC);
 //fetches all contacts from database
  ?>
  <div class="col-12">
- <?php if (array_key_exists('deleted', $_GET)) : ?>
-   <div class="alert">
-     <p>Contact deleted.</p>
-   </div>
- <?php endif; ?>
+
 
  <div class="intro-text">
- <h1> Welcome to the contact manager. </h1>
- <h4> View all of the added contacts here. Click on 'New Contact' above to add a contact to the database. Click on one of the contacts below to edit or delete it.</h2>
+   <?php if (array_key_exists('deleted', $_GET)) : ?>
+     <div class="alert alert-danger col-sm-5" role="alert">
+       <p>Contact deleted! Your contact was successfully removed.</p>
+     </div>
+   <?php endif; ?>
+ <h1> Contact manager: </h1>
+ <h5> View all of the added contacts here. Click on 'New Contact' above to add a contact to the database. Click on one of the contacts below to edit or delete it.</h2>
 </div>
-<div class="intro-text">
- <h5> Total contacts: <?= count($contacts); ?> </h3>
- </div>
+ <h4> Total contacts: <span class="strong"><?= count($contacts); ?></span> </h3>
  <!-- counts contacts -->
-          <table class="table">
+          <table class="table table-striped">
             <thead>
               <th>ID</th>
               <th>First Name</th>

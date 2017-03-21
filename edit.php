@@ -12,36 +12,36 @@
 ?>
 
 <div class="col-10 offset-1">
+  <div class="form-container">
   <?php if (array_key_exists('created', $_GET)) : ?>
-  <div>
-    <p>Contact created.</p>
+  <div class="alert alert-success col-sm-4" role="alert">
+    <p>Contact created! Your contact was successfully added.</p>
   </div>
   <?php endif; ?>
   <?php if (array_key_exists('updated', $_GET)) : ?>
-  <div>
-    <p>Contact updated.</p>
+  <div class="alert alert-info col-sm-4" role="alert">
+    <p>Contact updated!</p>
   </div>
   <?php endif; ?>
-<a href="/delete.php?id=<?= $contact['id']; ?>" class="btn">Delete contact</a>
-<h1>Edit Contact</h1>
-
+  <div class="flex" id="edit-header">
+<h2>Edit Contact</h2>
+<a href="/delete.php?id=<?= $contact['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this contact?');">Delete contact</a>
+</div>
 <form method="POST" action="/update.php">
   <input type="hidden" name="id" id="id" value="<?= $contact['id']; ?>" />
   <div class="row">
-  <div class="form-group col-sm-6">
+  <div class="form-group col-sm-5">
     <label for="fname">First Name</label>
     <input class="form-control" type="text" name="fname" id="fname" value="<?= $contact['fname']; ?>" />
   </div>
 
-  <div class="form-group col-sm-6">
+  <div class="form-group col-sm-5">
     <label for="lname">Last Name</label>
     <input class="form-control" type="text" name="lname" id="lname" value="<?= $contact['lname']; ?>" />
   </div>
-</div>
 
-<div class="form-group">
+<div class="form-group col-sm-2">
   <label for="title">Title</label>
-  <input class="form-control" type="text" name="title" id="title" value="<?= $contact['title']; ?>" />
   <select name="title" id="title" value="<?= $contact['title']; ?>" class="form-control">
       <option value="Ms." selected>Ms.</option>
       <option value="Mrs.">Mrs.</option>
@@ -51,20 +51,27 @@
       <option value="Dr.">Dr.</option>
   </select>
 </div>
-
-  <div class="form-group">
+</div>
+<div class="row">
+  <div class="form-group col-sm-5">
     <label for="phone">Telephone</label>
     <input class="form-control" type="tel" name="phone" id="phone" value="<?= $contact['phone']; ?>" />
   </div>
+</div>
 
-  <div class="form-group">
+<div class="row">
+  <div class="form-group col-sm-5">
     <label for="email">Email</label>
     <input class="form-control" type="email" name="email" id="email" value="<?= $contact['email']; ?>" />
   </div>
-  <div class="form-group">
+</div>
+
+<div class="row">
+  <div class="form-group col-sm-5">
     <label for="street">Address</label>
     <input class="form-control" type="text" name="street" id="street" value="<?= $contact['street']; ?>" />
   </div>
+</div>
   <div class="row">
   <div class="form-group col-sm-5">
     <label for="city">City</label>
@@ -141,13 +148,14 @@
 </div>
 
   <div class="form-group">
-    <label for="notes">Notes</label>
+    <label for="notes">Notes (max 200 characters)</label>
     <textarea class="form-control" name="notes" id="notes" value="<?= $contact['notes']; ?>"><?= $contact['notes']; ?></textarea>
   </div>
 
 
-  <button class="btn">Save Task</button>
+  <button class="btn btn-primary">Save Contact</button>
 </form>
+</div>
 </div>
 
 <?php include 'footer.php'; ?>

@@ -3,13 +3,15 @@ include 'header.php';
 ?>
 <div class="col-10 offset-1">
 <form method="POST" action="/create.php">
+  <div class="form-container">
+    <h2>Create New Contact:</h2>
   <div class="row">
-    <div class="form-group col-sm-4">
+    <div class="form-group col-sm-5">
       <label for="fname">First Name</label>
       <input class="form-control" type="text" name="fname" id="fname" value="" placeholder="First Name"/>
     </div>
 
-    <div class="form-group col-sm-4">
+    <div class="form-group col-sm-5">
       <label for="lname">Last Name</label>
       <input class="form-control" type="text" name="lname" id="lname" value="" placeholder="Last Name"/>
     </div>
@@ -27,28 +29,31 @@ include 'header.php';
     </div>
 
   </div>
-
-    <div class="form-group">
+  <div class="row">
+    <div class="form-group col-sm-5">
       <label for="phone">Telephone</label>
       <input class="form-control" type="tel" name="phone" id="phone" value="" placeholder="Telephone"/>
     </div>
-
-    <div class="form-group">
+  </div>
+<div class="row">
+    <div class="form-group col-sm-5">
       <label for="email">Email Address</label>
       <input class="form-control" type="email" name="email" id="email" value="" placeholder="Email"/>
     </div>
-
-    <div class="form-group">
+  </div>
+  <div class="row">
+      <div class="form-group col-sm-5">
       <label for="street">Street Address</label>
       <input class="form-control" type="text" name="street" id="street" value="" placeholder="Street"/>
     </div>
-
-    <div class="form-group">
+  </div>
+  <div class="row">
+    <div class="form-group col-sm-5">
       <label for="city">City</label>
       <input class="form-control" type="text" name="city" id="city" value="" placeholder="City"/>
     </div>
 
-    <div class="form-group">
+    <div class="form-group col-sm-5">
       <label for="state">State</label>
       <select name="state" id="state" value="AL" class="form-control">
           <option value="AL" selected>Alabama</option>
@@ -111,20 +116,21 @@ include 'header.php';
       </select>
     </div>
 
-    <div class="form-group">
+    <div class="form-group col-sm-2">
       <label for="zip">Zip Code</label>
       <input class="form-control" type="number" name="zip" id="zip" value="" placeholder="Zip"/>
     </div>
+  </div>
 
     <div class="form-group">
-      <label for="notes">Notes</label>
+      <label for="notes">Notes (max 200 characters)</label>
       <textarea class="form-control" name="notes" id="notes" value="" placeholder="Notes"></textarea>
     </div>
 
 
-    <button class="btn btn-primary">Create New Task</button>
+    <button class="btn btn-primary">Create New Contact</button>
 
-
+</div>
 </form>
 </div>
 
