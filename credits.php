@@ -2,6 +2,7 @@
 include 'header.php';
  ?>
  <div class="col-12">
+   <div class="info-container">
    <div class="intro-text">
    <h1>Credits</h1>
    <p class="lead">
@@ -20,6 +21,7 @@ include 'header.php';
       <li><a target="_blank" href="https://elvery.net/demo/responsive-tables/">https://elvery.net/demo/responsive-tables/ </a></li>
       <li><a target="_blank" href="https://codepen.io/designcouch/pen/Atyop">https://codepen.io/designcouch/pen/Atyop</a></li>
     </ul>
+ </div>
  </div>
 <?php
 include 'footer.php';

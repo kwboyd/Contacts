@@ -6,7 +6,7 @@ include 'header.php';
   <div class="form-container">
     <div class="flex form-header">
     <h2>Create New Contact:</h2>
-    <a href="/index.php" class="btn btn-danger">Cancel</a>
+    <a href="/index.php" class="btn medium btn-danger">Cancel</a>
   </div>
   <div class="row">
     <div class="form-group col-sm-5">
@@ -131,7 +131,7 @@ include 'header.php';
     </div>
 
 
-    <button class="btn btn-primary">Create New Contact</button>
+    <button class="btn large btn-primary">Create New Contact</button>
 
 </div>
 </form>

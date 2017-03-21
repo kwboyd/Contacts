@@ -7,7 +7,7 @@
     VALUES
     (:fname, :lname, :title, :phone, :email, :street, :city, :state, :zip, :notes)
   ");
-  //inserts into databse
+  //inserts into database
 
   $stmt->execute(array(
     ':fname' => $_POST['fname'],

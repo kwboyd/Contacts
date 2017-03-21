@@ -14,7 +14,7 @@ $stmt = $db->prepare('UPDATE contacts SET
   zip = :zip,
   notes = :notes
   WHERE id = :id');
-//$stmt->bindParam
+  //sends the updated values to the database for the matching id
 $stmt->execute(array(
   ':id' => $_POST['id'],
   ':fname' => $_POST['fname'],
@@ -30,3 +30,4 @@ $stmt->execute(array(
 ));
 
 header('Location: http://localhost:8080/edit.php?updated=true&id=' . $_POST['id']);
+//redirects to edit page

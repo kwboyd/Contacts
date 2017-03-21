@@ -8,6 +8,7 @@ $contacts = $db->query('SELECT * FROM contacts')->fetchAll(PDO::FETCH_ASSOC);
 
  <div class="intro-text">
    <?php if (array_key_exists('deleted', $_GET)) : ?>
+     <!-- displays deleted alert -->
      <div class="alert alert-danger col-sm-5" role="alert">
        <p>Contact deleted! Your contact was successfully removed.</p>
      </div>
@@ -34,6 +35,7 @@ $contacts = $db->query('SELECT * FROM contacts')->fetchAll(PDO::FETCH_ASSOC);
             <tbody>
               <?php foreach($contacts as $contact) : ?>
                 <!-- displays each contact's information -->
+                <!-- data titles become the label on mobile -->
                 <tr>
                   <td class="mobile-large" data-title="ID"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['id']; ?></a></td>
                   <td class="mobile-large" data-title="First Name"><a href="/edit.php?id=<?= $contact['id']; ?>"> <?= $contact['fname']; ?></a></td>
