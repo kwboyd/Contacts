@@ -23,7 +23,7 @@
     <p>Contact updated!</p>
   </div>
   <?php endif; ?>
-  <div class="flex" id="edit-header">
+  <div class="flex form-header">
 <h2>Edit Contact</h2>
 <a href="/delete.php?id=<?= $contact['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this contact?');">Delete contact</a>
 </div>

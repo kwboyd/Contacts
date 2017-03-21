@@ -47,7 +47,7 @@ include 'header.php';
    <div class="col-sm-6">
      <h3>Body fonts</h3>
      <p>Droid Serif 400</p>
-     <p class="lead">Droid Serif 700</p>
+     <p class="strong">Droid Serif 700</p>
    </div>
   </div>
   <div class="style-sections row">
@@ -66,6 +66,23 @@ include 'header.php';
        <p class="lead">p.lead</p>
      </div>
    </div>
+   <div class="style-sections row">
+     <div class="col-sm-6">
+       <h2>Unordered list</h2>
+       <ul>
+         <li>ul li</li>
+         <li>ul li</li>
+         <li>ul li</li>
+       </ul>
+     </div>
+     <div class="col-sm-6">
+       <h2>Ordered list</h2>
+       <ol>
+         <li>ol li</li>
+         <li>ol li</li>
+         <li>ol li</li>
+       </ol>
+     </div>
  </div>
 <?php
 include 'footer.php';

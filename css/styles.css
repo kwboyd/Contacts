@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, th, nav a {
+h1, h2, h3, h4, h5, th, nav a, .btn {
   font-family: 'Lato', sans-serif;
 }
 
@@ -12,9 +12,30 @@ h1, h2, h3, h4, h5 {
   color: #2E2243;
 }
 
+a {
+  color: #d2b637;
+}
+
+a:hover, a:focus{
+  text-decoration: none;
+  color: #bda019;
+}
+
 .lead {
   font-size: 1rem;
-  font-weight: 700;
+}
+
+ul {
+  margin-left: 17px;
+}
+
+ul li {
+  list-style-type: circle;
+  font-size: .9rem;
+}
+
+ol {
+  margin-left: 17px;
 }
 
 p {
@@ -34,10 +55,15 @@ p {
 
 .gray-purple {
   background-color: #806C90;
+  color: #806C90;
 }
 
 .medium-purple {
   background-color: #5a416f;
+}
+
+.purple-text {
+  color: #5a416f;
 }
 
 .dark-purple {
@@ -73,7 +99,6 @@ body {
 
 .strong {
   font-weight: 700;
-  color: #806c90;
 }
 
 .form-container {
@@ -197,6 +222,11 @@ nav {
   background-color: #2E2243;
 }
 
+nav li {
+  list-style-type: none;
+  font-size: 1rem;
+}
+
 .navbar-inverse .navbar-nav .nav-link:focus, .navbar-inverse .navbar-nav .nav-link:hover, .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-toggler:focus, .navbar-inverse .navbar-toggler:hover {
   color: #d2b637;
 }
@@ -205,7 +235,7 @@ nav {
   display: inline;
 }
 
-#edit-header {
+.form-header {
   justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;

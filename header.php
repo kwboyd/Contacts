@@ -39,6 +39,9 @@
     <li class="nav-item">
       <a class="nav-link" href="/styleguide.php">Styleguide</a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/credits.php">Credits</a>
+    </li>
   </ul>
 </div>
 </nav>

@@ -4,7 +4,10 @@ include 'header.php';
 <div class="col-10 offset-1">
 <form method="POST" action="/create.php">
   <div class="form-container">
+    <div class="flex form-header">
     <h2>Create New Contact:</h2>
+    <a href="/index.php" class="btn btn-danger">Cancel</a>
+  </div>
   <div class="row">
     <div class="form-group col-sm-5">
       <label for="fname">First Name</label>
