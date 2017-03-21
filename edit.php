@@ -17,7 +17,7 @@
   <?php if (array_key_exists('created', $_GET)) : ?>
     <!-- displays created alert -->
   <div class="alert alert-success col-sm-4" role="alert">
-    <p>Contact created! Your contact was successfully added.</p>
+    <p>Contact successfully created! Your contact was successfully added.</p>
   </div>
   <?php endif; ?>
   <?php if (array_key_exists('updated', $_GET)) : ?>

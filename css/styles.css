@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, th, nav a, .btn {
   font-family: 'Lato', sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h4, h5 {
   color: #2E2243;
 }
 
@@ -103,7 +103,7 @@ h1 {
 
 h2 {
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .form-container h2 {
@@ -111,13 +111,14 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  color: #5a416f;
   font-weight: 400;
 }
 
 h4 {
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
 .intro-text h4 {
@@ -125,7 +126,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 300;
 }
 
@@ -151,6 +152,8 @@ h5 {
 
 .btn {
   cursor: pointer;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 a {
@@ -259,10 +262,6 @@ p {
   margin-bottom: 0px;
 }
 
-/*.alert-danger {
-  background-color: #D25834;
-  opacity: .5;
-}*/
 
 /*forms*/
 
@@ -319,6 +318,10 @@ th:last-child {
 
 /*styleguide css*/
 
+.style-sections {
+  margin-top: 20px;
+}
+
 .color {
   width: 100px;
   height: 100px;
@@ -339,17 +342,33 @@ th:last-child {
   margin-bottom: 0px;
 }
 
+.gradient-line {
+  margin: 0;
+  margin-bottom: 10px;
+  height: 2px;
+  background: #2E2243; /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2e2243+0,000000+100&0.65+0,0+100 */
+  background: -webkit-linear-gradient(left, rgba(46,34,67,0.65) 0%, rgba(0,0,0,0) 100%);
+  background: -o-linear-gradient(left, rgba(46,34,67,0.65) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to right, rgba(46,34,67,0.65) 0%, rgba(0,0,0,0) 100%) ; /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a62e2243', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+}
+
+.short {
+  width: 50%;
+  height: 1px;
+}
+
 .button-container {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 16px;
 }
 
-.btn {
-  flex-grow: 0;
-  flex-shrink: 0;
+.feature-example {
+  margin-top: 15px;
 }
-
 /*navbar animation from https://codepen.io/designcouch/pen/Atyop*/
 
           #bar-container {
