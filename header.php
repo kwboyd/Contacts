@@ -13,7 +13,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
      <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/styles.css">
-  <body>
+  <body class="gray-purple">
     <nav class="navbar navbar-inverse navbar-toggleable-md">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
         <!-- <span id="toggler-icon" class="navbar-toggler-icon"></span> -->

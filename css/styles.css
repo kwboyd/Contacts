@@ -4,7 +4,6 @@
 }
 
 body {
-  background-color: #806C90;
   font-family: 'Droid Serif', serif;
 }
 
@@ -49,6 +48,15 @@ body {
 
 .off-white {
   background-color: #f9f8f8;
+  border: 1px solid #bbb;
+}
+
+.sunset-orange {
+  background-color: #d25834;
+}
+
+.dark-orange {
+  background-color: #ad3612;
 }
 
 /*containers*/
@@ -166,6 +174,32 @@ a:hover, a:focus{
   border-color: #bda019;
 }
 
+.btn-danger {
+  background-color: #d25834;
+  border-color: #ad3612;
+}
+
+.btn-danger:hover, .btn-danger.focus, .btn-danger:focus {
+  box-shadow: none;
+  background-color: #ad3612;
+  border-color: #ad3612;
+}
+
+/*lists*/
+
+ul {
+  margin-left: 17px;
+}
+
+ul li {
+  list-style-type: circle;
+  font-size: .9rem;
+}
+
+ol {
+  margin-left: 17px;
+}
+
 /*nav styles*/
 
 nav {
@@ -225,20 +259,10 @@ p {
   margin-bottom: 0px;
 }
 
-/*lists*/
-
-ul {
-  margin-left: 17px;
-}
-
-ul li {
-  list-style-type: circle;
-  font-size: .9rem;
-}
-
-ol {
-  margin-left: 17px;
-}
+/*.alert-danger {
+  background-color: #D25834;
+  opacity: .5;
+}*/
 
 /*forms*/
 
@@ -301,8 +325,29 @@ th:last-child {
   border-radius: 5px;
   margin-bottom: 3px;
 }
+
+.color-row {
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.color-info {
+  margin-left: 15px;
+}
+
 .style-sections p{
   margin-bottom: 0px;
+}
+
+.button-container {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 /*navbar animation from https://codepen.io/designcouch/pen/Atyop*/
@@ -412,6 +457,22 @@ th:last-child {
 
 /*media queries*/
 
+@media screen and (min-width: 1020px) {
+  .navbar-toggleable-md {
+    align-items: baseline;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .button-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .button-container button {
+    margin-top: 6px;
+  }
+}
+
 @media only screen and (max-width: 1020px) {
   .mobile-large {
     font-size: .9em;
@@ -482,8 +543,9 @@ th:last-child {
 /*end code from other sources*/
 }
 
-@media screen and (min-width: 1020px) {
-  .navbar-toggleable-md {
-    align-items: baseline;
+@media only screen and (max-width: 767px) and (min-width: 575px){
+  .button-container {
+    flex-direction: row;
+    align-items: center;
   }
 }
