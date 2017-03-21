@@ -8,7 +8,7 @@ This project also includes a styleguide.
 ## Instructions
 Download or clone the project repo.
 
-Download MAMP from: https://www.mamp.info/en/downloads/ or use your local server program of choice
+Download MAMP from: https://www.mamp.info/en/downloads/ or use your local server program of choice.
 
 Import the SQL database and run a local server.
 
