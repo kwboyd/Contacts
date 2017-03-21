@@ -13,7 +13,7 @@ $contacts = $db->query('SELECT * FROM contacts')->fetchAll(PDO::FETCH_ASSOC);
      </div>
    <?php endif; ?>
  <h1> Contact manager: </h1>
- <h5> View all of the added contacts here. Click on 'New Contact' above to add a contact to the database. Click on one of the contacts below to edit or delete it.</h2>
+ <p class="lead"> View all of the added contacts here. Click on 'New Contact' above to add a contact to the database. Click on one of the contacts below to edit or delete it.</p>
 </div>
  <h4> Total contacts: <span class="strong"><?= count($contacts); ?></span> </h3>
  <!-- counts contacts -->

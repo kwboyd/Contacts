@@ -8,6 +8,7 @@
     <meta charset="utf-8">
     <title>Contacts manager</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
      <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -34,6 +35,9 @@
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/new.php">New Contact&nbsp;<i class="fa fa-plus" aria-hidden="true"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/styleguide.php">Styleguide</a>
     </li>
   </ul>
 </div>
